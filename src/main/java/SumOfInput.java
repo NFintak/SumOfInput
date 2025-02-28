@@ -2,32 +2,31 @@ import java.util.Scanner;
 
 public class SumOfInput {
 
-    void main(String[] args) {
-        int num = userInput();
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Pick a number: ");
+
+        int num = Integer.parseInt(scan.nextLine());
+
+        System.out.println(sumNumbers(num));
 
         int sum = sumNumbers(num);
 
-        System.out.println(sum);
+        System.out.println(tbd(num));
     }
 
-    boolean testSumOfInput() {
-        return sumNumbers(5) == 15;
-    }
-
-    int userInput() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Pick a number: ");
-        int number = scan.nextInt();
-        scan.close();
-        return number;
-    }
-
-    int sumNumbers(int num) {
-        int n = 0;
-        for (int i = 1; i <= num; i++) {
-            n = n + i;
+    public static int sumNumbers(int n) {
+        int total = 0;
+        for (int i = 0; i <= n; i++) {
+            total = total + i;
         }
-        return n;
+        return total;
     }
+
+    public static int tbd(int x) {
+        return (x * (x+1))/2;
+    }
+
 }
 
