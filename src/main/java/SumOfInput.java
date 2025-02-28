@@ -1,11 +1,30 @@
+import java.util.Scanner;
+
 public class SumOfInput {
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
         int num = userInput();
 
-        int sum = sumNumbers(num);
+        int sum = sumNumbers();
 
         System.out.println(sum);
     }
+
+    int userInput() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Pick a number: ");
+        int number = scan.nextInt();
+        scan.close();
+        return number;
+    }
+
+    int sumNumbers(int num) {
+        int sum = 0;
+        for (int i = 1; i <= num; i++) {
+            sum = sum + i;
+        }
+        return sum;
+    }
+
 
 }
