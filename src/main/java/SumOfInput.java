@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SumOfInput {
 
-    public void main(String[] args) {
+    void main(String[] args) {
         int num = userInput();
 
         int sum = sumNumbers(num);
@@ -23,12 +23,11 @@ public class SumOfInput {
     }
 
     int sumNumbers(int num) {
-        int sum = 0;
+        int n = 0;
         for (int i = 1; i <= num; i++) {
-            sum = sum + i;
+            n = n + i;
         }
-        return sum;
+        return n;
     }
-
-
 }
+
