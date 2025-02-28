@@ -10,6 +10,10 @@ public class SumOfInput {
         System.out.println(sum);
     }
 
+    boolean testSumOfInput() {
+        return sumNumbers(5) == 15;
+    }
+
     int userInput() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Pick a number: ");
